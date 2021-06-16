@@ -1,0 +1,65 @@
+<!-- Scenariusz zadania nr 1
+
+Przygotuj generator haseł. Formularz powinien posiadać różne opcje według których generowane będzie hasło. Wśród elementów formularza powinny znaleźć się:
+
+    checkboxy z opcjami:
+        użyć dużych liter
+        użyć małych liter
+        użyć cyfr
+        użyć znaków specjalnych
+    pole z długością hasła
+    przycisk "Generuj"
+
+Po naciśnięciu przycisku powinno zostać wyświetlone losowe hasło zawierające wybrane znaki. -->
+
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Rafał Dziankowski">
+		<meta name="description" content="Generator Hasła">
+		<meta name="keywords" content="generator, hasło">
+		<meta name="keywords" content="super hasło, hasło, generator hasła">
+		<meta name="robots" content="none">
+		
+		<title>Generator Hasła</title>					
+		<link rel="stylesheet" href="style1.css">			
+	</head>		
+	
+	<body>	
+		<div class="master">
+			<h1>Generator Hasła</h1>
+			
+			<p>________</p> 
+			
+			<div>
+				<label for="how_sign">ilość znaków:</label>
+				<input type="number" min="4" max="64" value="0" id="how_sign" />
+			</div>
+		<div class="cb">			
+			<div>			
+				<input type="checkbox" id="cb1" onchange="change()"/>
+				<label for="cb1" id="lb1">z dużych liter</label>
+			</div>	
+			
+			<div>			
+				<input type="checkbox" id="cb2" onchange="change()"/>
+				<label for="cb2" id="lb2">z małych liter</label>
+			</div>				
+			
+			<div>					
+				<input type="checkbox" id="cb3" onchange="change()"/>
+				<label for="cb3" id="lb3">z cyfr</label>
+			</div>
+			
+			<div>			
+				<input type="checkbox" id="cb4" onchange="change()"/>	
+				<label for="cb4" id="lb4">z znaków specjalnych</label>
+			</div>	
+		</div>	
+			<button onClick="generate()" id="btn_generate">Generuj</button>				
+		</div>				
+
+		<script src="script1.js"></script>
+	</body>
+</html>
